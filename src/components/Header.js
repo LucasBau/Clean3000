@@ -1,12 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
-const Header = () => {
+const Header = ({ isHome = false }) => {
+  const navigate = useNavigate();
+  const goToHome = () => {
+    navigate("/");
+  };
   return (
     <div>
       <header>
         <div className="logo">
+          {!isHome ? <p onClick={() => goToHome()}>Retour</p> : ""}
           <img
-            src={`${process.env.PUBLIC_URL}/img/logo-clean3000.png`}
+            src={`${process.env.PUBLIC_URL}/img/logo-clean3000-transparent.png`}
             alt=""
           />
         </div>
