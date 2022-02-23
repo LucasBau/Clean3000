@@ -10,7 +10,13 @@ const Header = ({ isHome = false }) => {
     <div>
       <header>
         <div className="logo">
-          {!isHome ? <p onClick={() => goToHome()}>Retour</p> : ""}
+          {!isHome ? (
+            <p id="return" onClick={() => goToHome()}>
+              Retour
+            </p>
+          ) : (
+            ""
+          )}
           <img
             src={`${process.env.PUBLIC_URL}/img/logo-clean3000-transparent.png`}
             alt=""

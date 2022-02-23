@@ -90,7 +90,7 @@ function App() {
             onChange={(e) => handleChange("client", e.target.value)}
           />
         </div>
-        <div className="input">
+        <div className="input observ">
           <label htmlFor="observ">Observation : </label>
           <input
             type="text"
@@ -101,7 +101,9 @@ function App() {
             onChange={(e) => handleChange("observ", e.target.value)}
           />
         </div>
-        <input type="submit" value="Valider" />
+        <div className="submit">
+          <input id="submit" type="submit" value="Valider" />
+        </div>
       </form>
     </div>
   );
